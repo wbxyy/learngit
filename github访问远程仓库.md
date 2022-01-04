@@ -15,3 +15,6 @@ SSH是需要配置，以后每次访问都是直接访问
 2. 在浏览器中登录 Github，点击头像 -> Settings -> SSH and GPG Keys -> New SSH key
 3. 将 `id_rsa.pub` 中的内容，粘贴到 Key 对应的文本框
 4. 在 Title 文本框中任意填写一个名称，来标识这个 Key 从何而来
+
+### 测试 SSH 是否配置成功
+`ssh -T git@github.com`
