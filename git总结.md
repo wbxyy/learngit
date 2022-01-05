@@ -16,3 +16,8 @@
 
 `git push -u origin 本地分支名：远程分支名` 将本地分支推送到远程仓库
 `git push -u origin 本地分支名` 远程仓库分支名称保持一致时，可简写
+
+`git remote show origin` 查看远程分支列表
+
+`git checkout 远程分支名` 追踪远程分支（下载远程分支）
+`git checkout 本地分支名 origin/远程分支名` 追踪远程分支（下载远程分支并改名）
