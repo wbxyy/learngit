@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用vue3写一个登录页需要什么</title>
+  <meta name="description" content="使用vue3写一个登录页需要什么">
+  <meta name="keywords" content="使用vue3写一个登录页需要什么">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul,ol{
+      list-style: none;
+    }
+
+    a{
+      text-decoration: none;
+      color: #333;
+    }
+
+    input,button{
+      outline: none;
+      border:none;
+    }
+
+    ul.issue{
+      background-color: pink;
+      padding:5px;
+      color: #333;
+
+    }
+
+    ul.issue li span{
+      font-size: 12px;
+      display: block;
+      text-indent:2em;
+      margin: 10px 0;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h3>首先讨论一下用vue3写一个登录页需要些什么，分析比写代码更重要哦</h2和>
+  <ul class="issue">
+    <li>1.需要登录页的html和css
+      <span>在登录页中提交身份验证信息：用户名、密码</span>
+    </li>
+    <li>2.需要vueRouter做路由守卫
+      <span>对于未持令牌的匿名游客，只能允许其访问公共页面，否则跳转登录页</span>
+    </li>
+    <li>3.需要需要axios做接口请求
+      <span>需要请求后端</span>
+    </li>
+    <li>4.需要在服务端配置登录接口，返回Jwt的token
+      <span>后端响应后，返回一个标识身份的令牌，即token</span>
+    </li>
+    <li>5.需要在服务端配置用户信息接口，通过用户token来访问
+      <span>通过token返回用户的角色、权限</span>
+    </li>
+    <li>6.动态路由策划
+      <span>通过用户的角色、权限动态生成路由表。用户可以访问路由表的中全部网页</span>
+    </li>
+  </ul>
+  
+</body>
+</html>
