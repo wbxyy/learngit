@@ -38,6 +38,11 @@
 
 ### git 远程分支命令
 
+#### 连接
+`git remote add origin git@github.com:my_uname/my_project` 使用 SSH 的方式连接远程仓库 
+
+将本地仓库 push 到远程仓库 git push -u origin master
+
 #### 推送（重点）
 `git push -u origin 本地分支名` 远程仓库分支名称保持一致时，可简写
 
