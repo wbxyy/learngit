@@ -62,3 +62,25 @@
 
 #### 删除
 `git push origin --delete 远程分支名` 删除远程分支
+
+### 测试 SSH 是否配置成功
+ssh -T git@github.com
+
+### 常见错误
+
+如果频繁出现以下错误
+```
+fatal: unable to access 'https://github.com/xxx/autowrite.git/': 
+OpenSSL SSL_read: Connection was reset, errno 10054
+
+fatal: unable to access 'https://github.com/xxx/autowrite.git/':
+Failed to connect to github.com port 443: Timed out
+```
+原因是提交项目时中间会有http和https代理，然后被各种原因拦截了。
+如果我们的本地配置了SSL，就不需要http和https代理也能上传项目，用如下命令取消代理：
+```
+//取消http代理
+git config --global --unset http.proxy
+//取消https代理 
+git config --global --unset https.proxy
+```
